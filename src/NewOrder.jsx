@@ -73,6 +73,11 @@ function NewOrder() {
                 onClick={() => item.stock > 0 && addToCart(item)}
               >
                 <div className="card-inner-border"></div>
+                {item.image && (
+                  <div style={{ width: '100%', height: '120px', borderRadius: '8px', overflow: 'hidden', marginBottom: '10px' }}>
+                    <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                )}
                 <h4 style={{ color: 'var(--gold-bright)', fontFamily: 'Cinzel', fontSize: '16px' }}>{item.name}</h4>
                 <p style={{ color: 'var(--text-muted)', fontSize: '12px' }}>{item.category}</p>
                 <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', width: '100%', position: 'relative', zIndex: 5 }}>

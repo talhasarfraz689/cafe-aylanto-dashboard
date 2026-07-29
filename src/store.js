@@ -2,12 +2,12 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
 const initialInventory = [
-  { id: '1', name: 'Espresso', category: 'Coffee', price: 4.50, stock: 100 },
-  { id: '2', name: 'Latte', category: 'Coffee', price: 5.50, stock: 80 },
-  { id: '3', name: 'Cappuccino', category: 'Coffee', price: 6.00, stock: 60 },
-  { id: '4', name: 'Mocha', category: 'Coffee', price: 6.50, stock: 50 },
-  { id: '5', name: 'Croissant', category: 'Food', price: 3.50, stock: 30 },
-  { id: '6', name: 'Blueberry Muffin', category: 'Food', price: 4.00, stock: 25 }
+  { id: '1', name: 'Espresso', category: 'Coffee', price: 4.50, stock: 100, image: '/espresso.png' },
+  { id: '2', name: 'Latte', category: 'Coffee', price: 5.50, stock: 80, image: '/latte.png' },
+  { id: '3', name: 'Cappuccino', category: 'Coffee', price: 6.00, stock: 60, image: '/cappuccino.png' },
+  { id: '4', name: 'Mocha', category: 'Coffee', price: 6.50, stock: 50, image: '/mocha.png' },
+  { id: '5', name: 'Croissant', category: 'Food', price: 3.50, stock: 30, image: '/croissant.png' },
+  { id: '6', name: 'Blueberry Muffin', category: 'Food', price: 4.00, stock: 25, image: '/muffin.png' }
 ];
 
 export const useStore = create(
