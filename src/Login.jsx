@@ -20,7 +20,7 @@ function Login() {
 
   return (
     <div className="dashboard-container" style={{ justifyContent: 'center', alignItems: 'center' }}>
-      <div className="card" style={{ width: '400px', padding: '40px' }}>
+      <div className="card" style={{ width: '400px', height: 'auto', minHeight: '450px' }}>
         <div className="card-inner-border"></div>
         <div className="card-content">
           <div className="logo-circle" style={{ margin: '0 auto 20px auto' }}>

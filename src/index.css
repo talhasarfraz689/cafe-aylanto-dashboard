@@ -35,7 +35,7 @@ body {
     max-width: calc(100vh * (30 / 18));
     max-height: calc(100vw * (18 / 30));
     aspect-ratio: 30 / 18;
-    background-image: url('bg.png');
+    background-image: url('/bg.png');
     background-color: #110905;
     background-size: cover;
     background-position: center;

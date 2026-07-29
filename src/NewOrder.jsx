@@ -73,10 +73,10 @@ function NewOrder() {
                 onClick={() => item.stock > 0 && addToCart(item)}
               >
                 <div className="card-inner-border"></div>
-                <h4 style={{ color: 'var(--text-dark)', fontFamily: 'Cinzel', fontSize: '16px' }}>{item.name}</h4>
+                <h4 style={{ color: 'var(--gold-bright)', fontFamily: 'Cinzel', fontSize: '16px' }}>{item.name}</h4>
                 <p style={{ color: 'var(--text-muted)', fontSize: '12px' }}>{item.category}</p>
                 <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', width: '100%', position: 'relative', zIndex: 5 }}>
-                  <span style={{ fontWeight: 'bold', color: 'var(--text-dark)' }}>${item.price.toFixed(2)}</span>
+                  <span style={{ fontWeight: 'bold', color: 'var(--gold-dark)' }}>${item.price.toFixed(2)}</span>
                   <span style={{ fontSize: '11px', color: item.stock > 0 ? 'var(--gold-dark)' : 'red' }}>
                     {item.stock > 0 ? `Stock: ${item.stock}` : 'OUT OF STOCK'}
                   </span>
