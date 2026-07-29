@@ -69,15 +69,19 @@ function NewOrder() {
               <div 
                 key={item.id} 
                 className="card" 
-                style={{ width: '100%', minHeight: '140px', padding: '15px', cursor: item.stock > 0 ? 'pointer' : 'not-allowed', opacity: item.stock > 0 ? 1 : 0.5 }}
+                style={{ 
+                  width: '100%', 
+                  minHeight: '140px', 
+                  padding: '15px', 
+                  cursor: item.stock > 0 ? 'pointer' : 'not-allowed', 
+                  opacity: item.stock > 0 ? 1 : 0.5,
+                  backgroundImage: item.image ? `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url(${item.image})` : 'none',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
                 onClick={() => item.stock > 0 && addToCart(item)}
               >
                 <div className="card-inner-border"></div>
-                {item.image && (
-                  <div style={{ width: '100%', height: '120px', borderRadius: '8px', overflow: 'hidden', marginBottom: '10px' }}>
-                    <img src={item.image} alt={item.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                  </div>
-                )}
                 <h4 style={{ color: 'var(--gold-bright)', fontFamily: 'Cinzel', fontSize: '16px' }}>{item.name}</h4>
                 <p style={{ color: 'var(--text-muted)', fontSize: '12px' }}>{item.category}</p>
                 <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', width: '100%', position: 'relative', zIndex: 5 }}>
